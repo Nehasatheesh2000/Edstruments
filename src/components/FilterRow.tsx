@@ -16,8 +16,8 @@ import { AVAILABLE_FIELDS, OPERATORS_BY_TYPE } from '../constants/fields';
 import { SimpleInput } from './inputs/SimpleInput';
 import { RangeInput } from './inputs/RangeInput';
 import { SelectInput } from './inputs/SelectInput';
-import { DateInput } from './inputs/Dateinput';
-import { BooleanInput } from './inputs/Booleaninput';
+import { DateInput } from './inputs/DateInput';
+import { BooleanInput } from './inputs/BooleanInput';
 interface FilterRowProps {
   condition: FilterCondition;
   onChange: (condition: FilterCondition) => void;
