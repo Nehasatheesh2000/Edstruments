@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import {
     Table, TableBody, TableCell, TableContainer, TableHead, TableRow,
-    Paper, TablePagination, Typography, Chip, Box
+    Paper, TablePagination, Typography, Chip, 
 } from '@mui/material';
 import type { Employee } from '../types';
 

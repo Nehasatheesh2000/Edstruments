@@ -18,6 +18,7 @@ import { RangeInput } from './inputs/RangeInput';
 import { SelectInput } from './inputs/SelectInput';
 import { DateInput } from './inputs/DateInput';
 import { BooleanInput } from './inputs/BooleanInput';
+
 interface FilterRowProps {
   condition: FilterCondition;
   onChange: (condition: FilterCondition) => void;
@@ -66,9 +67,7 @@ export const FilterRow: React.FC<FilterRowProps> = ({
   };
 
   const fieldDef = AVAILABLE_FIELDS.find(f => f.key === condition.field);
-  const operators = fieldDef
-    ? OPERATORS_BY_TYPE[fieldDef.type]
-    : [];
+  const operators = fieldDef ? OPERATORS_BY_TYPE[fieldDef.type] : [];
 
   const renderInput = () => {
     if (!fieldDef) return null;
@@ -77,25 +76,13 @@ export const FilterRow: React.FC<FilterRowProps> = ({
 
     switch (fieldDef.type) {
       case 'text':
-        return (
-          <SimpleInput
-            value={condition.value}
-            onChange={handleValueChange}
-          />
-        );
+        return <SimpleInput value={condition.value} onChange={handleValueChange} />;
 
       case 'number':
         return isRange ? (
-          <RangeInput
-            value={condition.value}
-            onChange={handleValueChange}
-          />
+          <RangeInput value={condition.value} onChange={handleValueChange} />
         ) : (
-          <SimpleInput
-            type="number"
-            value={condition.value}
-            onChange={handleValueChange}
-          />
+          <SimpleInput type="number" value={condition.value} onChange={handleValueChange} />
         );
 
       case 'date':
@@ -103,7 +90,7 @@ export const FilterRow: React.FC<FilterRowProps> = ({
           <DateInput
             value={condition.value}
             onChange={handleValueChange}
-            isRange={isRange}
+            operator={condition.operator as 'before' | 'after' | 'between'}
           />
         );
 
@@ -127,12 +114,7 @@ export const FilterRow: React.FC<FilterRowProps> = ({
         );
 
       case 'boolean':
-        return (
-          <BooleanInput
-            value={Boolean(condition.value)}
-            onChange={handleValueChange}
-          />
-        );
+        return <BooleanInput value={Boolean(condition.value)} onChange={handleValueChange} />;
 
       default:
         return null;
@@ -140,21 +122,10 @@ export const FilterRow: React.FC<FilterRowProps> = ({
   };
 
   return (
-    <Box
-      sx={{
-        display: 'flex',
-        gap: 2,
-        alignItems: 'center',
-        mb: 2
-      }}
-    >
+    <Box sx={{ display: 'flex', gap: 2, alignItems: 'center', mb: 2 }}>
       <FormControl size="small" sx={{ minWidth: 160 }}>
         <InputLabel>Field</InputLabel>
-        <Select
-          label="Field"
-          value={condition.field}
-          onChange={handleFieldChange}
-        >
+        <Select label="Field" value={condition.field} onChange={handleFieldChange}>
           {AVAILABLE_FIELDS.map(field => (
             <MenuItem key={field.key} value={field.key}>
               {field.label}
@@ -165,11 +136,7 @@ export const FilterRow: React.FC<FilterRowProps> = ({
 
       <FormControl size="small" sx={{ minWidth: 160 }}>
         <InputLabel>Operator</InputLabel>
-        <Select
-          label="Operator"
-          value={condition.operator}
-          onChange={handleOperatorChange}
-        >
+        <Select label="Operator" value={condition.operator} onChange={handleOperatorChange}>
           {operators.map(op => (
             <MenuItem key={op.value} value={op.value}>
               {op.label}
@@ -178,15 +145,9 @@ export const FilterRow: React.FC<FilterRowProps> = ({
         </Select>
       </FormControl>
 
-      <Box sx={{ flexGrow: 1 }}>
-        {renderInput()}
-      </Box>
+      <Box sx={{ flexGrow: 1 }}>{renderInput()}</Box>
 
-      <IconButton
-        onClick={onRemove}
-        color="error"
-        size="small"
-      >
+      <IconButton onClick={onRemove} color="error" size="small">
         <Trash2 size={18} />
       </IconButton>
     </Box>
