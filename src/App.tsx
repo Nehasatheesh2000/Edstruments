@@ -2,7 +2,7 @@ import React, { useState, useMemo } from 'react';
 import { createTheme, ThemeProvider, CssBaseline, Box, Typography, Container } from '@mui/material';
 import { FilterBuilder } from './components/FilterBuilder';
 import { DataTable } from './components/FilterTable';
-import { initialData } from './data/mockdata'; // 50 generated employees
+import { initialData } from './data/mockData';
 import { filterData } from './utils/filterLogic';
 import type { FilterCondition } from './types';
 
