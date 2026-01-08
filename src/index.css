@@ -1,0 +1,102 @@
+/* Reset and global defaults */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  background: #121212;
+  color: #ffffff;
+  overflow-x: hidden;
+}
+
+/* Remove any forced flex on body — let container center content */
+body {
+  display: block;
+}
+
+/* Main container that's centered and limited */
+#root {
+  max-width: 1280px;
+  margin: 0 auto; /* center */
+  padding: 2rem 1rem;
+}
+
+/* Headings like Edstruments: tall, bold, clean */
+h1, h2, h3, h4 {
+  font-weight: 600;
+  line-height: 1.3;
+  margin-bottom: 0.5em;
+}
+
+/* Buttons: modern SaaS style */
+button,
+a.cta-button {
+  background: #1f6feb;
+  color: #fff;
+  padding: 0.65rem 1.25rem;
+  font-weight: 500;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.2s ease-in-out;
+}
+
+button:hover,
+a.cta-button:hover {
+  background: #0053d6;
+}
+
+/* Typography scale for body and paragraphs */
+p {
+  margin-bottom: 1rem;
+  font-size: 1rem;
+  color: #e0e0e0;
+}
+
+/* Section spacing like hero / record area */
+.section {
+  padding: 2rem 0;
+}
+
+/* Centering text blocks where appropriate */
+.text-center {
+  text-align: center;
+}
+
+/* Increase table responsiveness and readability */
+.MuiTable-root {
+  table-layout: auto !important; 
+  width: 100%;
+}
+
+.MuiTableCell-root {
+  padding: 0.6rem 0.8rem;
+  font-size: 0.875rem;
+}
+
+/* Utility helpers */
+.flex {
+  display: flex;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.items-center {
+  align-items: center;
+}
+
+.mt-1 { margin-top: 1rem; }
+.mt-2 { margin-top: 2rem; }
+

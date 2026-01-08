@@ -1,0 +1,163 @@
+[
+    {
+        "id": 1,
+        "name": "Alice Johnson",
+        "email": "alice.j@example.com",
+        "role": "Manager",
+        "department": "Engineering",
+        "salary": 120000,
+        "joinDate": "2020-03-15",
+        "isActive": true,
+        "skills": [
+            "Management",
+            "Agile",
+            "Jira"
+        ],
+        "address": {
+            "city": "New York",
+            "state": "NY",
+            "country": "USA"
+        },
+        "projects": 5,
+        "lastReview": "2023-12-01",
+        "performanceRating": 4.8
+    },
+    {
+        "id": 2,
+        "name": "Bob Smith",
+        "email": "bob.s@example.com",
+        "role": "Developer",
+        "department": "Engineering",
+        "salary": 95000,
+        "joinDate": "2021-06-20",
+        "isActive": true,
+        "skills": [
+            "React",
+            "TypeScript",
+            "Node.js"
+        ],
+        "address": {
+            "city": "San Francisco",
+            "state": "CA",
+            "country": "USA"
+        },
+        "projects": 3,
+        "lastReview": "2023-11-15",
+        "performanceRating": 4.5
+    },
+    {
+        "id": 3,
+        "name": "Charlie Brown",
+        "email": "charlie.b@example.com",
+        "role": "Designer",
+        "department": "Design",
+        "salary": 80000,
+        "joinDate": "2022-01-10",
+        "isActive": false,
+        "skills": [
+            "Figma",
+            "UI/UX",
+            "Sketch"
+        ],
+        "address": {
+            "city": "Austin",
+            "state": "TX",
+            "country": "USA"
+        },
+        "projects": 2,
+        "lastReview": "2023-10-05",
+        "performanceRating": 3.9
+    },
+    {
+        "id": 4,
+        "name": "Diana Ross",
+        "email": "diana.r@example.com",
+        "role": "Director",
+        "department": "Management",
+        "salary": 180000,
+        "joinDate": "2018-11-05",
+        "isActive": true,
+        "skills": [
+            "Strategic Planning",
+            "Leadership",
+            "Public Speaking"
+        ],
+        "address": {
+            "city": "Chicago",
+            "state": "IL",
+            "country": "USA"
+        },
+        "projects": 8,
+        "lastReview": "2024-01-10",
+        "performanceRating": 4.9
+    },
+    {
+        "id": 5,
+        "name": "Evan Wright",
+        "email": "evan.w@example.com",
+        "role": "Developer",
+        "department": "Engineering",
+        "salary": 105000,
+        "joinDate": "2021-02-14",
+        "isActive": true,
+        "skills": [
+            "Python",
+            "Django",
+            "AWS"
+        ],
+        "address": {
+            "city": "Seattle",
+            "state": "WA",
+            "country": "USA"
+        },
+        "projects": 4,
+        "lastReview": "2023-09-20",
+        "performanceRating": 4.2
+    },
+    {
+        "id": 6,
+        "name": "Fiona Green",
+        "email": "fiona.g@example.com",
+        "role": "HR Specialist",
+        "department": "Human Resources",
+        "salary": 75000,
+        "joinDate": "2019-08-01",
+        "isActive": true,
+        "skills": [
+            "Recruiting",
+            "Communication",
+            "Conflict Resolution"
+        ],
+        "address": {
+            "city": "Boston",
+            "state": "MA",
+            "country": "USA"
+        },
+        "projects": 2,
+        "lastReview": "2023-07-15",
+        "performanceRating": 4.0
+    },
+    {
+        "id": 7,
+        "name": "George Miller",
+        "email": "george.m@example.com",
+        "role": "QA Engineer",
+        "department": "Engineering",
+        "salary": 85000,
+        "joinDate": "2020-05-22",
+        "isActive": true,
+        "skills": [
+            "Selenium",
+            "Cypress",
+            "Java"
+        ],
+        "address": {
+            "city": "Denver",
+            "state": "CO",
+            "country": "USA"
+        },
+        "projects": 6,
+        "lastReview": "2023-08-30",
+        "performanceRating": 4.3
+    }
+]
